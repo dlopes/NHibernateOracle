@@ -1,0 +1,54 @@
+﻿@model IEnumerable<oracleBeta.Models.Cadastro>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.COD_PESSOA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CPF_CGC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NOME_PESSOA)
+        </th>
+       
+        <th>
+            @Html.DisplayNameFor(model => model.DATA_INCLUSAO)
+        </th>
+        
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.COD_PESSOA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CPF_CGC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NOME_PESSOA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DATA_INCLUSAO)
+        </td>
+       
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { CPF_CGC= item.CPF_CGC, COD_PESSOA = item.COD_PESSOA}) |
+            @Html.ActionLink("Details", "Details", new { CPF_CGC = item.CPF_CGC, COD_PESSOA = item.COD_PESSOA}) |
+            @Html.ActionLink("Delete", "Delete", new { CPF_CGC = item.CPF_CGC, COD_PESSOA = item.COD_PESSOA })
+        </td>
+    </tr>
+}
+
+</table>

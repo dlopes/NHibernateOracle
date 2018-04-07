@@ -1,0 +1,50 @@
+﻿@model oracleBeta.Models.Cadastro
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Biometria</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.COD_PESSOA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.COD_PESSOA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CPF_CGC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CPF_CGC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NOME_PESSOA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOME_PESSOA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DATA_INCLUSAO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DATA_INCLUSAO)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
